@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8eb083ff87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+   <div id="head">
+    <div class="container">
+        <nav>
+            <h1 class="name">Raihana Zainab S</h1>
+            <ul id="sidemenu">
+            <li><a href="#head">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact | Resume</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="headtext">
+            <p>BCA Undergrad || Front-End Developer</p>
+            <h1>Hey, I'm <span> Raihana</span></h1>
+        </div>
+    </div>
+   </div>
+    <!--About section  -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="abtcol1">
+                <img src="image2.jpeg">
+            </div>
+            <div class="abtcol2">
+                <h1 class="subtitle">About Me</h1>
+                <p>I'm Raihana, a BCA undergrad and a passionate front-end developer with a strong foundation in HTML, CSS, and JavaScript. My journey in software development has been marked by a commitment to creating engaging and functional web experiences.
+                 I have successfully completed a software engineering project utilizing VB.NET and SQL, showcasing my versatility and ability to work with various technologies. Additionally, I have designed and developed Nisshei, a Fashion E-commerce Website, demonstrating my proficiency in front-end development and my keen eye for aesthetics and user experience.I am constantly learning and staying up-to-date with the latest trends and best practices in web development to ensure that my skills remain sharp and relevant.</p>
+                <div class="tabtitles">
+                <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                <p class="tablinks" onclick="opentab('education')">Qualification</p>
+                </div>
+                <div class="tabcontents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-End Development</span></li>Designing Web Interfaces<br>
+                        <li><span>Version Control Tools</span></li>Proficient in Github<br>
+                        <li><span>Software Engineering</span></li>Development of a software product<br>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="experience">
+                    <ul>
+                        <li><span>2023-2024</span></li>Google Developers Student Club Design Team Member at Kristu Jayanti College, Bengaluru<br>
+                        <li><span>2024</span></li>Front-End Development Intern at NIELIT, Chennai<br>
+                        <li><span>2023-2024</span></li>Hostel Management System(Software Project) at Kristu Jayanti College, Bengaluru<br>
+                    </ul>
+                </div>
+
+                <div class="tabcontents" id="education">
+                    <ul>
+                        <li><span>2020</span></li>Class 10 at St Charles High School(ICSE), Bengaluru. GRADE:93.2%<br>
+                        <li><span>2022</span></li>2nd Year PUC at St Charles Women's PU College, Bengaluru. GRADE:94.8%<br>
+                        <li><span>2025</span></li>Pursuing BCA undergrad degree at Kristu Jayanti College, Autonomous, Bengaluru<br>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+   </div>
+   <!-- Projects section -->
+   <div id="projects">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="projectslist">
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Software Engineering Project</h2>
+                <p>I developed a comprehensive Hostel Management System as part of my software engineering project. This system is designed to streamline and automate the administrative tasks involved in managing a hostel. The project was built using VB.NET for the front end, providing a user-friendly interface, and SQL for the back end, ensuring robust data management and retrieval.</p>
+            <a href="https://github.com/Raihana-2964/Software-Engineering-Project">View Github Repository</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Nisshei- Fashion E-commerce Website</h2>
+                <p>I developed a dynamic and visually appealing fashion e-commerce website using HTML, CSS, and JavaScript. This project showcases my front-end development skills and my ability to create a seamless online shopping experience.</p>
+            <a href="https://github.com/Raihana-2964/Nisshei-Fashion-E-Commerce-Website">View Github Repository</a>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- Contact -->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactleft">
+                <h1 class="subtitle">Contact</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>zainabraihana1985@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7975771698</p>
+                <div class="socialicons">
+                    <a href="https://linkedin.com/in/raihana29/"><i class="fa-brands fa-linkedin"></i></a>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <a href="Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contactright">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Interactivity using JS -->
+   <script>
+    var tablinks=document.getElementsByClassName("tablinks");
+    var tabcontents=document.getElementsByClassName("tabcontents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    <script>
+    var sidemenu=document.getElementById("sidemenu")
+    function openmenu()
+    {
+        sidemenu.style.right="0";
+    }
+    function closemenu()
+    {
+        sidemenu.style.right="-200px";
+    }
+   </script>
+   <!-- Contact form details recieval -->
+   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2o4vBlorDnDOA_i-jQpmRF77iQqTIM2tpFX5ymAxdMgN02VKI1galSMwkcQlRHVgVEw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML="Message sent"
+        })
+        setTimeout(function(){
+            msg.innerHTML=" "
+        },5000)
+        form.reset()
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
